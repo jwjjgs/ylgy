@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "author": "jwjjgs <jwjjgs@jwjjgs.cn>",
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "ahooks": "^3.7.1",
+    "antd-mobile": "^5.23.0",
+    "axios": "^0.27.2",
+    "moment": "^2.29.4",
+    "umi": "^4.0.21"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.20",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.8.3"
+  }
+}
