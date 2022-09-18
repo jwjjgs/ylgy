@@ -31,10 +31,13 @@ class User
             if ($res['err_code'] != 0)
                 throw new WarningException('获取用户信息失败');
 
-            ['wx_open_id' => $wx_open_id] = $res['data'];
+            ['wx_open_id' => $wx_open_id, 'nick_name' => $nick_name, 'avatar' => $avatar, 'gender' => $sex] = $res['data'];
 
-            $res = Request::post('user/login_tourist', [
-                'uuid' => $wx_open_id,
+            $res = Request::post('user/login_oppo', [
+                'uid' => $wx_open_id,
+                'nick_name' => empty($nick_name) ? '1' : $nick_name,
+                'avatar' => empty($avatar) ? '1' : $avatar,
+                'sex' => 1,
             ]);
 
             if ($res['err_code'] != 0)

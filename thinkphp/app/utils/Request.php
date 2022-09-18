@@ -16,7 +16,6 @@ class Request
     {
         $headers = [
             'User-Agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI MiniGame WindowsWechat',
-            'Referer' => 'https://servicewechat.com/wx141bfb9b73c970a9/17/page-frame.html',
         ];
         if (session('?token'))
             $headers['t'] = session('token');
